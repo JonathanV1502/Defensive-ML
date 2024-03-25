@@ -26,7 +26,7 @@ class CICIDSDataset(Dataset):
     if self.transform:
       feature = self.transform(feature.values, dtype=torch.float32)
     if self.target_transform:
-      label = self.target_transform(label, dtype=torch.int64)
+      label = self.target_transform(label.values, dtype=torch.int64)
     return feature, label
 
 def get_dataset():

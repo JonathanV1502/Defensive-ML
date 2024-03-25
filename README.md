@@ -1,9 +1,15 @@
 # Defensive-ML-
 
-## Loading Dataset
+## To-Do
+* dd
 
-Run the following
 
-```python data.py```
+
+## Set-up
+### Dependences
+``pip install -r requirements.txt``
+
+### Loading Dataset
+``python data.py``
 
 ``python preprocessing/cidis2017.py``
