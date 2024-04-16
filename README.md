@@ -12,4 +12,4 @@
 ### Loading Dataset
 ``python data.py``
 
-``python preprocessing/cidis2017.py``
+``python preprocessing/cicids2017.py``
