@@ -7,7 +7,7 @@
 
 ## Set-up
 ### Dependences
-``pip install -r requirements.txt``
+``conda create --name DF-ML --file spec-file.txt``
 
 ### Loading Dataset
 ``python data.py``
