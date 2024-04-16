@@ -23,7 +23,7 @@ class CICIDS2017Preprocessor(object):
 
     def read_data(self):
         """"""
-        filenames = glob.glob('../data/raw' + '/*.csv')
+        filenames = glob.glob('data/raw' + '/*.csv')
         datasets = [pd.read_csv(filename) for filename in filenames]
 
         # Remove white spaces and rename the columns
@@ -189,10 +189,10 @@ if __name__ == "__main__":
     (X_train, y_train), (X_val, y_val), (X_test, y_test) = cicids2017.scale(training_set, validation_set, testing_set)
     
     # Save the results
-    X_train.to_pickle(os.path.join(DATA_DIR, 'processed', 'train/train_features.pkl'))
-    X_val.to_pickle(os.path.join(DATA_DIR, 'processed', 'val/val_features.pkl'))
-    X_test.to_pickle(os.path.join(DATA_DIR, 'processed', 'test/test_features.pkl'))
+    X_train.to_pickle('data/processed/train/train_features.pkl')
+    X_val.to_pickle('data/processed/val/val_features.pkl')
+    X_test.to_pickle('data/processed/test/test_features.pkl')
 
-    y_train.to_pickle(os.path.join(DATA_DIR, 'processed', 'train/train_labels.pkl'))
-    y_val.to_pickle(os.path.join(DATA_DIR, 'processed', 'val/val_labels.pkl'))
-    y_test.to_pickle(os.path.join(DATA_DIR, 'processed', 'test/test_labels.pkl'))
+    y_train.to_pickle('data/processed/train/train_labels.pkl')
+    y_val.to_pickle('data/processed/val/val_labels.pkl')
+    y_test.to_pickle('data/processed/test/test_labels.pkl')
