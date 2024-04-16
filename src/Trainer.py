@@ -24,7 +24,7 @@ class MLPTrainer:
         # Train step
         train_loss, train_cr = self.__train_step(train_loader)
         # Val step
-        val_loss, val_cr = self.__train_step(val_loader)
+        val_loss, val_cr = self.__train_step(val_loader) # Fix this later
 
         # Update history
         self.history['train_loss'].append(train_loss)
