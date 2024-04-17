@@ -193,7 +193,7 @@ if __name__ == "__main__":
     (X1, y1), (X2, y2), (X3, y3),(X4,y4) = cicids2017.scale(set_1, set_2, set_3,set_4)
     
     # Save the results
-    X1.to_pickle('data/processs_split/split1/x1.pkl')
+    X1.to_pickle('data/process_split/split1/x1.pkl')   
     X2.to_pickle('data/process_split/split2/x2.pkl')
     X3.to_pickle('data/process_split/split3/x3.pkl')
     X4.to_pickle('data/process_split/split4/x4.pkl')
