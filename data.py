@@ -3,7 +3,7 @@ import requests
 import zipfile
 import shutil
 
-dirs = ['data', 'data/raw', 'data/processed/train', 'data/processed/val', 'data/processed/test']
+dirs = ['data', 'data/raw', 'data/processed/train', 'data/processed/val', 'data/processed/test', 'data/process_split/split1, data/process_split/split2, data/process_split/split3, data/process_split/split4']
 for dir in dirs:
   os.makedirs(dir, exist_ok=True)
 
