@@ -22,3 +22,11 @@ However, these IDS using deep learning methods introduce new vulnerabilities. Fo
 1. [NAttack! Adversarial Attacks to bypass a GAN based classifier trained to detect Network intrusion](https://arxiv.org/pdf/2002.08527.pdf)
 
 2. [Semi-Supervised Learning with Generative Adversarial Networks](https://arxiv.org/pdf/1606.01583.pdf)
+
+
+
+## Papers
+
+1. [NAttack! Adversarial Attacks to bypass a GAN based classifier trained to detect Network intrusion](https://arxiv.org/pdf/2002.08527.pdf)
+
+2. [Semi-Supervised Learning with Generative Adversarial Networks](https://arxiv.org/pdf/1606.01583.pdf)
