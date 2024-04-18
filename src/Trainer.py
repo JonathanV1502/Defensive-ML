@@ -24,7 +24,7 @@ class MLPTrainer:
         # Train step
         train_loss, train_cr = self.__train_step(train_loader)
         # Val step
-        val_loss, val_cr = self.__train_step(val_loader) # Fix this later
+        val_loss, val_cr = self.eval(val_loader) # Fix this later
 
         # Update history
         self.history['train_loss'].append(train_loss)
@@ -76,16 +76,18 @@ class MLPTrainer:
     
     with torch.no_grad():
       for inputs, labels in val_loader:
-        outputs = self.model(inputs.to(self.device))
-        loss = self.criterion(outputs.squeeze(), labels.to(self.device))
-        
+        labels = labels.squeeze(1).to(self.device)
+        inputs = inputs.to(self.device)
+        outputs = self.model(inputs)
+        loss = self.criterion(outputs, labels)
+
         # get metrics
         y_preds += outputs.argmax(axis=1).cpu().tolist()
-        y_trues += y.cpu().tolist()
+        y_trues += labels.cpu().tolist()
         epoch_loss += loss.item()
-
-    epoch_loss /= len(val_loader)
-    cr = metrics.classification_report(y_trues, y_preds, output_dict=True, zero_division=0.0)
+      
+      epoch_loss /= len(val_loader)
+      cr = metrics.classification_report(y_trues, y_preds, output_dict=True, zero_division=0.0)
 
     return epoch_loss, cr
 

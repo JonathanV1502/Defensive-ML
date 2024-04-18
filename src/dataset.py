@@ -77,3 +77,34 @@ def load_data(batch_size: int):
     )
 
     return train_loader, valid_loader, test_loader
+
+
+def load_data_split(split: int, batch_size: int):
+  train_data = CICIDSDataset(
+      features_file=f"data/process_split/split{split}/x{split}.pkl",
+      target_file=f"data/process_split/split{split}/y{split}.pkl",
+      transform=torch.tensor,
+      target_transform=torch.tensor
+  )
+
+  test_data = CICIDSDataset(
+      features_file=f"data/process_split/split4/x4.pkl",
+      target_file=f"data/process_split/split4/y4.pkl",
+      transform=torch.tensor,
+      target_transform=torch.tensor
+  )
+
+    # Create the dataloaders - for training, validation and testing
+  train_loader = torch.utils.data.DataLoader(
+        dataset=train_data,
+        batch_size=batch_size,
+        shuffle=True
+    )
+
+  test_loader = torch.utils.data.DataLoader(
+        dataset=test_data,
+        batch_size=batch_size,
+        shuffle=False
+    )
+
+  return train_loader, test_loader
