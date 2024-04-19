@@ -10,7 +10,11 @@ However, these IDS using deep learning methods introduce new vulnerabilities. Fo
 `git clone https://github.com/JonathanV1502/Defensive-ML.git`
 
 ### Dependences
-``conda create --name DF-ML --file spec-file.txt``
+``conda create -n DF-ML python=3.11``
+
+``conda activate DF-ML``
+
+``pip install -r requirements.txt``
 
 ### Loading Dataset
 ``python data.py``
