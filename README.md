@@ -27,3 +27,9 @@ However, these IDS using deep learning methods introduce new vulnerabilities. Fo
 
 2. [Semi-Supervised Learning with Generative Adversarial Networks](https://arxiv.org/pdf/1606.01583.pdf)
 
+## Team
+- Jonathan Villarreal
+- Jaime Flores
+- Alberto Castillo
+- Axel Serrano
+
